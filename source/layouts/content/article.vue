@@ -38,13 +38,13 @@ $content-width: 38rem
   margin: 1rem auto 1.75rem auto
   .article-label
     margin-top: 0
-    margin-left: .25rem
+    margin: 0 2rem
   .article-title
     font-size: 2.25rem
     margin-top: 0
 .article-content
   max-width: $content-width
-  margin: 0 2.125rem
+  margin: 0 2rem
 .article-closer
   max-width: 100%
   margin: 0 auto
