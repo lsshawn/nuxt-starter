@@ -10,7 +10,6 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  loading: { color: '#3B8070' },
   build: {
     extend (config, ctx) {
       if (ctx.isClient) {
@@ -46,5 +45,9 @@ module.exports = {
         isPost: false
       }]
     ]
-  }
+  },
+  css: [
+    { src: '~assets/sass/global.sass', lang: 'sass' }
+  ],
+  loading: { color: '#3B8070' }
 }
