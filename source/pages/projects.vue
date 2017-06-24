@@ -1,6 +1,7 @@
 <template>
   <section class="container">
-    <h1> Alid Castano </h1>
+    <h1> Projects </h1>
+    <nuxt-child/>
   </section>
 </template>
 
