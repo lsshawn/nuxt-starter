@@ -38,7 +38,7 @@ $content-width: 38rem
   margin: 1rem auto 1.75rem auto
   .article-label
     margin-top: 0
-    margin: 0 2rem
+    margin-left: .25rem
   .article-title
     font-size: 2.25rem
     margin-top: 0
