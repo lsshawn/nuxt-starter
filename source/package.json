@@ -5,7 +5,7 @@
   "author": "Alid Castano <alidcastano@gmail.com>",
   "dependencies": {
     "@nuxtjs/content": "file:../../../nuxt-content",
-    "nuxt": "latest"
+    "nuxt": "^1.0.0-alpha.4"
   },
   "scripts": {
     "dev": "nuxt",

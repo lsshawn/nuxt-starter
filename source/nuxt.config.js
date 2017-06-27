@@ -28,19 +28,18 @@ module.exports = {
   content: {
     srcDir: '../content',
     layoutDir: 'layouts/content',
-    route: "/",
+    route: "content",
     dirs: [
       ['articles', {
         layout: "article",
-        permalink: ":slug",
+        permalink: ":slug"
       }],
       ['books', {
-        route: "books",
+        layout: "book",
         permalink: ":section/:slug",
         isPost: false
       }],
       ['projects', {
-        route: "projects",
         permalink: ":section/:slug",
         isPost: false
       }]
