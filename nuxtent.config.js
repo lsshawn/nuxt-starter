@@ -9,10 +9,6 @@ module.exports = {
         }
       ]
     }],
-    ['books', {
-      permalink: ":slug",
-      isPost: false
-    }],
     ['projects', {
       permalink: ":slug",
       isPost: false

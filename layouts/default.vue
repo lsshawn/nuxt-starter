@@ -13,6 +13,7 @@ export default{
   data: () => ({
     menu: [
       'Archives',
+      'Library',
       'About',
       'Contact'
     ]
