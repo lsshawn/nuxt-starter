@@ -1,6 +1,6 @@
 ---
 
-title: How Not To Learn Programming (if you want to build something useful)
+title: How not to learn programming (if you want to build something useful)
 
 ---
 
