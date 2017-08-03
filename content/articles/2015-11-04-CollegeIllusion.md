@@ -21,7 +21,7 @@ My brothers and I stared blankly---we were still in middle school. What could sh
 
 But despite our ensuing remarks, our mother insisted. So we amused her and took the folders. Little did we know, that day she was just planting the belief in our minds. A belief that in the coming years she would continue to nourish with the same beam of conviction.
 
-And five years later, my brother Juan was accepted into Harvard (and the rest of us didn't do so bad, either).
+And five years later... my brother Juan was accepted into Harvard. (And the rest of us, having been accepted into Penn, NYU, and Wake Forest, didn't do so bad, either.)
 
 His achievement redefined my beliefs of what I thought possible. I started wondering, Why did my mom limit her vision to college? Not to belittle his accomplishment. But, unless success is guaranteed by a diploma, college is only a means to a promising life. So why couldn't have my mom print out Steve Jobs’ Wikipedia page, instead?
 

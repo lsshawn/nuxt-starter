@@ -1,10 +1,10 @@
 module.exports = {
   head: {
-    title: 'starter',
+    title: 'Alid Castano',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: 'Personal Site' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -23,28 +23,8 @@ module.exports = {
     }
   },
   modules: [
-    ['@nuxtjs/content']
+    'nuxtent'
   ],
-  content: {
-    srcDir: '../content',
-    layoutDir: 'layouts/content',
-    route: "content",
-    dirs: [
-      ['articles', {
-        layout: "article",
-        permalink: ":slug"
-      }],
-      ['books', {
-        layout: "book",
-        permalink: ":section/:slug",
-        isPost: false
-      }],
-      ['projects', {
-        permalink: ":section/:slug",
-        isPost: false
-      }]
-    ]
-  },
   css: [
     { src: '~assets/sass/global.sass', lang: 'sass' }
   ],
