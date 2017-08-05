@@ -6,13 +6,13 @@
   "dependencies": {
     "@nuxtjs/axios": "^3.1.0",
     "nuxt": "^1.0.0-alpha.3",
-    "nuxtent": "^0.2.57"
+    "nuxtent": "file:///Users/acastano/Sites/nuxt/nuxtent"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "nuxtent generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },

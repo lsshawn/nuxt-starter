@@ -18,12 +18,13 @@ export default {
 
   computed: {
     articlesByDate () {
+      // this.$content.byDate()
       const articles = new Map()
       this.articles
       .forEach(article => {
         const [year] = article.date.split('-')
         if (!articles.has(year)) articles.set(year, [article])
-        else articles.get(year).unshift(article)
+        else articles.get(year).push(article)
       })
       return [...articles].sort(([date1], [date2]) => date2 - date1)
     }

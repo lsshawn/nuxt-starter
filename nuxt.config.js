@@ -28,5 +28,5 @@ module.exports = {
   css: [
     { src: '~assets/sass/global.sass', lang: 'sass' }
   ],
-  loading: { color: '#3B8070' }
+  loading: false
 }

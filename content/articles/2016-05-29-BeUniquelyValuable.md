@@ -1,7 +1,5 @@
 ---
-
 title: How to make yourself indispensable
-
 ---
 
 There's this aura in college that you should first study what you like---one that many students are suffocated by. I only know, because I've gotten a good whiff of its effects myself.

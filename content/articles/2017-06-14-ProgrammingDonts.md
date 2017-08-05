@@ -1,7 +1,5 @@
 ---
-
 title: How not to learn programming (if you want to build something useful)
-
 ---
 
 Like most self-taught programmers, I started coding because I wanted to build something useful. Little did I know what that would entail–confusion, bugs, and an endless amount of frameworks and plugins to choose from and use. A majority of the time, I’ll admit, instead of building something useful, I've been falling into the same ineffective behaviors.

@@ -1,12 +1,12 @@
 ---
-
 title: The best life advice I ever received
+
 image: stay-upwind.jpg
+
 quote: |
     Don't ignore your dreams; don't work too much;
     say what you think; cultivate friendships; be happy.
     - Paul Graham
-
 ---
 
 In the fall semester of my sophomore year, my friend and I got this random food app idea and decided to start a startup. We spent months developing the idea, working on the business plan, and practicing the pitch deck. We came to a point where we felt ready to pitch to investors-only to confront the ill-defined fact that we didn't have a product, only well-thought out idea, whatever that's worth.
