@@ -1,19 +1,24 @@
 <template lang="pug">
-ul.recent-articles
-  li(v-for="article in articles")
-    nuxt-link(:to="article.path") {{ article.title }}
+PreviewContainer(
+  title="What I've been thinking about"
+  :seeAll="{ path: '/archives', label: 'See all articles' }"
+)
+  ul.articles-container
+    li.article-item(v-for="article in articles")
+      nuxt-link(:to="article.path") {{ article.title }}
 </template>
 
 <script>
+import PreviewContainer from '~/components/PreviewContainer'
+
 export default {
   asyncData: async ({ app }) => ({
     articles: await app.$content('/articles')
     .query({ exclude: 'body' })
     .getOnly(0, 5)
-  })
+  }),
+  components: {
+    PreviewContainer
+  }
 }
 </script>
-
-<style lang="sass">
-@import "../../assets/sass/util.sass"
-</style>

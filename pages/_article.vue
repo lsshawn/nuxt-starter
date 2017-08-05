@@ -31,6 +31,8 @@ export default {
   font-size: 2.75rem
   margin-top: 0
   color: #45606e
+.article-body
+  margin-top: -.6rem
 .article-closer
   margin-bottom: 3rem
 .article-image
