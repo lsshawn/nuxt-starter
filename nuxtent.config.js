@@ -1,17 +1,12 @@
 module.exports = {
   content: [
+    'now',
     ['articles', {
       page: '/_article',
-      permalink: ':year/:slug',
-      generate: [
-        'get',
-        ['getAll', {
-          query: { exclude: 'body' }
-        }]
-      ]
+      permalink: ':year/:slug'
     }],
     ['projects', {
-      permalink: ":slug",
+      page: '/projects/_project',
       isPost: false
     }]
   ]

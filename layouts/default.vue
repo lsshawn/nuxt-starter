@@ -11,9 +11,9 @@ div.site-container(:class="layoutStyle")
         button Subscribe
     div.main
       nuxt
-  div.footer
+  div.site-footer
     p.message Welcome to my online home! I come here
-      |  <nuxt-link to="/articles">reflect on my thoughts</nuxt-link>,
+      |  <nuxt-link to="/articles">clarify my thoughts</nuxt-link>,
       | <nuxt-link to="/projects">record my work</nuxt-link>, and
       | <nuxt-link to="/now">establish my priorities.</nuxt-link>
       | Fundamentally, this place is mainly for me, but while you're here, I hope you find your stay worthwhile.
@@ -150,10 +150,10 @@ export default {
 .landing-container .main
   padding-left: 1rem
 
-.landing-container .footer
-  position: absolute
-  bottom: 1rem
-.content-container .footer
+.landing-container .site-footer
+  position: relative
+  top: 1rem
+.content-container .site-footer
   display: none
 .message
   border-top: 2px dashed #eff3f5

@@ -18,6 +18,7 @@ export default {
 <style lang="sass">
 .preview-container
   width: 32rem
+  min-height: 26rem
 .preview-content
   margin-top: 1rem
   margin-bottom: .25rem

@@ -11,7 +11,7 @@ quote: |
 
 In the fall semester of my sophomore year, my friend and I got this random food app idea and decided to start a startup. We spent months developing the idea, working on the business plan, and practicing the pitch deck. We came to a point where we felt ready to pitch to investors-only to confront the ill-defined fact that we didn't have a product, only well-thought out idea, whatever that's worth.
 
-My friend and I had to spend the next three weeks trying to find a technical co-founder. We were eventually able to convince another friend to join us, and gave it a few more weeks of effort before the team and idea fizzled out.
+My friend and I spent those next three weeks trying to find a technical co-founder. We were eventually able to convince another friend to join us and gave it a few more weeks of effort; but at that point, the enthusiasm was lost and idea eventually fizzled out.
 
 I came out of the experience with the uncomfortable realization that the largest factor to my success was entirely dependent on someone else.
 

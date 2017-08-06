@@ -1,6 +1,6 @@
 <template lang="pug">
-ContentContainer
-  ul.archives-container(slot="content")
+ContentContainer.article-archives
+  ul(slot="content")
     li.article-group(v-for="[date, articles] in articlesByDate")
       h3.group-label {{ date }}
       ul.article-list

@@ -1,7 +1,7 @@
 <template lang="pug">
 PreviewContainer(
   title="What I've been working on"
-  :seeAll="{ path: '/projects', label: 'See all projects'}"
+  :seeAll="{ path: '/archives/projects', label: 'See all projects'}"
   )
   ul.projects-container
     li.project-item(v-for="project in projects")
@@ -17,7 +17,7 @@ export default {
       .query({ exclude: 'body' })
       .getAll())
       .sort((project1, project2) => project2.weight - project1.weight)
-      .slice(0, 4)
+      .slice(0, 3)
   }),
   components: {
     PreviewContainer

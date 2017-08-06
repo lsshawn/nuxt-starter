@@ -1,7 +1,7 @@
 <template lang="pug">
 PreviewContainer(
   title="What I've been thinking about"
-  :seeAll="{ path: '/archives', label: 'See all articles' }"
+  :seeAll="{ path: '/archives/articles', label: 'See all articles' }"
 )
   ul.articles-container
     li.article-item(v-for="article in articles")

@@ -23,6 +23,7 @@ export default {
 .featured-content
   max-width: 100%
   margin: 0 auto
+  min-height: 25rem
 .section-container
   width: 100%
   margin-bottom: 1.25rem
