@@ -8,7 +8,7 @@ div.site-container(:class="layoutStyle")
       li.nav-item(v-for="path in menu")
         nuxt-link.nav-link(:to="path" exact) {{ path | toTitle }}
       li.signup
-        button Subscribe
+        button(@click="toggleSignup") Subscribe
     div.main
       nuxt
   div.site-footer
@@ -19,7 +19,7 @@ div.site-container(:class="layoutStyle")
       | Fundamentally, this place is mainly for me, but while you're here, I hope you find your stay worthwhile.
 
   //- hidden from page until toggled
-  SignupForm
+  SignupForm(v-if="isLanding" :show="showSignup" :toggle="toggleSignup")
 </template>
 
 <script>
@@ -33,7 +33,8 @@ export default {
       '/now',
       '/about',
       '/contact'
-    ]
+    ],
+    showSignup: false
   }),
   computed: {
     isLanding () {
@@ -62,6 +63,11 @@ export default {
     }
   },
 
+  methods: {
+    toggleSignup () {
+      this.showSignup = !this.showSignup
+    }
+  },
   components: {
     SignupForm
   }
@@ -95,17 +101,18 @@ export default {
     margin-left: .25rem
     text-align: left
 .content-container .site-header
+  @include dim-effect(.7, 1)
   border-bottom: 2px solid $primary-light
   margin-top: .5rem
   margin-left: -1rem
   margin-right: -1rem
   padding-bottom: .25rem
   padding-left: 1.25rem
-  @include dim-effect(.7, 1)
 
 .masthead
   display: inline-block
   color: $primary-dark
+  letter-spacing: 1px
   font-weight: 600
   @media (min-width: $bp-desktop)
     margin: 0
@@ -117,6 +124,7 @@ export default {
       display: block
       color: #82a1b0
       font-size: 1.025rem
+      letter-spacing: initial
       font-weight: 400
       margin-top: -1.5rem
       padding-left: .6rem
@@ -144,7 +152,7 @@ export default {
   text-align: center
   @media (min-width: $bp-desktop)
     width: 42%
-    padding-left: 1.75rem
+    padding-left: .25rem
     margin-top: .75rem
     text-align: left
   .signup
@@ -153,7 +161,7 @@ export default {
       display: initial
       position: relative
       top: .75rem
-      left: 1rem
+      left: 2.8rem
     button
       background-color: transparent
       color: $primary-dark
@@ -162,6 +170,8 @@ export default {
       top: -1rem
       font-size: 1.025rem
       font-family: $heading-font-family
+      outline: none
+      cursor: pointer
   .nav-item
     display: inline-block
     text-align: center
@@ -169,6 +179,8 @@ export default {
     padding: .7rem .5rem
     text-decoration: none
     font-size: 1.025rem
+    @media (min-width: $bp-desktop)
+      padding: .7rem
   .nuxt-link-active
     border-top: 2px dashed $primary-light
     border-right: 2px dashed $primary-light

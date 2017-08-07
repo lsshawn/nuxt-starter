@@ -1,48 +1,124 @@
-<template lang="html">
-<div id="mc_embed_signup subscription-form" class="subscription-form" :style="formStyle">
-  <form action="//strive4.us8.list-manage.com/subscribe/post?u=a41f4e7f4068c1dd9d29b464e&amp;id=5c0c50f445"
-  method="post" id="mc-embedded-subscribe-form"
-  name="mc-embedded-subscribe-form"  class="validate"
-  target="_blank" novalidate>
-
-  <div id="mc_embed_signup_scroll">
-    <h2> Join My Newsletter  </h2>
-    <p> Sign up to receive weekly updates. </p>
-
-    <a class="close-form" id="close-form">x</a>
-
-    <div class="mc-field-group">
-      <label for="mce-EMAIL">Email</label>
-      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-    </div>
-    <div class="mc-field-group">
-      <label for="mce-FNAME">Name </label>
-      <input type="text" value="" name="NAME" class="" id="mce-FNAME">
-    </div>
-
-      <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
-      </div>
-      <!-- real people should not fill this in and expect good things -
-      do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a41f4e7f4068c1dd9d29b464e_5c0c50f445" tabindex="-1" value=""></div>
-
-        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-      </div>
-  </form>
-</div>
+<template lang="pug">
+div.signup-container(id="mc_embed_signup" :class="formClasses")
+  button.close-form(@click="closeForm") x
+  h2 Join My Mailing List
+  p Sign up to receive occasional updates.
+  form.signup-form(
+    action="//alidcastano.us16.list-manage.com/subscribe/post?u=922c2f0ea20e1c7be81225cf7&amp;id=9e22e0cf16"
+    method="post"
+    target="_blank"
+    novalidate
+  )
+    input.signup-field(type="text" placeholder="Your Name" name="FNAME" value="" )
+    input.signup-field(type="email" placeholder="Your Email" name="EMAIL" value="" )
+    button.send-button(type="submit" name="subscribe" @click="submitForm") Sign up
 </template>
 
 <script>
+
 export default{
-  data: () => ({
-    showForm: false
-  }),
+  props: {
+    show: { type: Boolean, required: true },
+    toggle: { type: Boolean, required: true }
+  },
   computed: {
-    formStyle () {
-      return { 'display': 'none' }
+    formClasses () {
+      return this.show ? 'slide-up' : 'slide-down'
+    }
+  },
+  methods: {
+    closeForm () {
+      this.toggle()
     }
   }
 }
 </script>
+
+
+<style lang="sass">
+@import "../assets/sass/util"
+
+$show-bottom-pos: 42%
+$hide-bottom-pos: -100%
+
+.signup-container
+  display: none
+  @media (min-width: $bp-tablet)
+    display: block
+    border: 2px solid darken($primary-light, 10%)
+    background: #fff
+    box-shadow: 0 4px 5px 5px $gray-4
+    width: $w-preview + 2rem
+    max-width: 100%
+    position: fixed
+    left: 4%
+    text-align: center
+    border-radius: 3px
+    padding: 3rem 2rem
+    z-index: 2
+    h2
+      margin-top: 0
+      font-size: 2.125rem
+.signup-form
+  position: relative
+  .signup-field:first-child
+    width: 28%
+  .signup-field
+    display: inline-block
+    width: 40%
+    margin-right: .5rem
+    background: linear-gradient(to top, $primary-light, #fff 30%)
+    border: 1px solid $primary-light
+    font-size: 1rem
+    padding: .25rem .5rem
+    max-width: 100%
+    border-radius: 3px
+    outline: none
+    cursor: text
+    &:focus
+      border: 1px solid $primary-dark
+  .send-button
+    display: inline-block
+    background: $primary-light
+    color: $primary-dark
+    border: 1px solid $primary-dark
+    border-radius: 3px
+    width: 18%
+    font-size: 1rem
+    padding: .3rem .6rem
+    cursor: pointer
+    outline: none
+
+.close-form
+  background: $primary-light
+  color: $primary-dark
+  float: right
+  position: absolute
+  top: 3%
+  right: 1.5%
+  padding: .2rem .4rem
+  line-height: 1rem
+  cursor: pointer
+  border: none
+  border-radius: 3px
+  outline: none
+
+.slide-up
+  bottom: $show-bottom-pos
+  @keyframes slide-up
+    0%
+      bottom: $hide-bottom-pos
+
+    100%
+      bottom: $show-bottom-pos
+  animation: slide-up 1s ease
+
+.slide-down
+  bottom: $hide-bottom-pos
+  @keyframes slide-down
+    0%
+      bottom: $show-bottom-pos
+    100%
+      bottom: $hide-bottom-pos
+    animation: slide-down 1s ease
+</style>

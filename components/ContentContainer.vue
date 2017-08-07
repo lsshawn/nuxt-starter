@@ -9,8 +9,7 @@ div.content-container
 </template>
 
 <style lang="sass">
-$bp-tablet: 768px
-$w-content: 38rem
+@import "../assets/sass/util"
 
 .content-container
   max-width: $w-content
@@ -18,9 +17,11 @@ $w-content: 38rem
     max-width: $w-content + 15rem
   .content
     max-width: $w-content
+    min-height:  10rem
     margin: 0 auto
     @media (min-width: $bp-tablet)
       margin-left: 1rem
+      min-height:  80vh
 
 .content-footer
   margin-bottom: 2rem

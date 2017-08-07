@@ -1,6 +1,6 @@
 <template lang="pug">
 div.preview-container
-  h2.preview-title  {{ title }}
+  h2.preview-title(v-if="title")  {{ title }}
   div.preview-content
     slot
   nuxt-link.see-all(v-if="seeAll" :to="seeAll.path") {{ seeAll.label }}
@@ -9,19 +9,22 @@ div.preview-container
 <script>
 export default {
   props: {
-    title: { type: String, required: true },
+    title: { type: String },
     seeAll: { type: Object }
   }
 }
 </script>
 
 <style lang="sass">
+@import "../assets/sass/util"
+
+
 .preview-container
-  width: 32rem
-  min-height: 26rem
+  max-width: $w-preview
+  min-height: 24.5rem
 .preview-content
   margin-top: 1rem
-  margin-bottom: .25rem
+  margin-bottom: -1rem
   li
     padding-bottom: .5rem
 

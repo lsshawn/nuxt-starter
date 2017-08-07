@@ -1,5 +1,5 @@
 <template lang="pug">
-div.featured-content
+PreviewContainer.featured-content
   div.section-container(v-for="item in featuredContent")
     h2.section-label {{ item.label }}
     section
@@ -7,23 +7,24 @@ div.featured-content
 </template>
 
 <script>
+import PreviewContainer from '~/components/PreviewContainer'
+
 export default {
   asyncData: async ({ app }) => ({
     featuredContent: [
       { label: 'Latest Article', ...await app.$content('/articles').getOnly(0) },
       { label: 'Featured Work', ...await app.$content('/projects').get('/nuxtent') }
     ]
-  })
+  }),
+  components: {
+    PreviewContainer
+  }
 }
 </script>
 
 <style lang="sass">
 @import "../../assets/sass/util"
 
-.featured-content
-  max-width: 100%
-  margin: 0 auto
-  min-height: 25rem
 .section-container
   width: 100%
   margin-bottom: 1.25rem
