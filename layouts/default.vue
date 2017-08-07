@@ -4,9 +4,9 @@ div.site-container(:class="layoutStyle")
     a.masthead(href="/") Alid Castano
       | <span class="slogan"> Programming, fitness, usable psychology, and conscious growth. </span>
   div.site-content
-    ul.nav
-      li(v-for="path in menu")
-        nuxt-link(:to="path" exact) {{ path | toTitle }}
+    ul.accordion-nav(:style="accordionStyle")
+      li.nav-item(v-for="path in menu")
+        nuxt-link.nav-link(:to="path" exact) {{ path | toTitle }}
       li.signup
         button Subscribe
     div.main
@@ -36,6 +36,18 @@ export default {
     },
     layoutStyle () {
       return this.isLanding ? 'landing-container' : 'content-container'
+    },
+    accordionStyle () {
+      if (this.$route.path === '/') {
+        return {
+          'border-top': '2px dashed #eff3f5',
+          'border-bottom': '2px dashed #eff3f5'
+        }
+      } else if (this.isLanding) {
+        return {
+          'border-bottom': '2px dashed #eff3f5'
+        }
+      }
     }
   },
 
@@ -101,15 +113,13 @@ export default {
   .slogan
     display: none
 
-.nav
-  border-top: 2px dashed #eff3f5
-  border-bottom: 2px dashed #eff3f5
+.accordion-nav
   width: 98%
   margin-top: -.25rem
   margin-bottom: 1.25rem
-  padding-top: .4rem
   padding-left: 0
-  padding-bottom: .4rem
+  padding-top: .5rem
+  padding-bottom: .5rem
   list-style-type: none
   text-align: center
   @media (min-width: $bp-desktop)
@@ -132,20 +142,22 @@ export default {
       top: -1rem
       font-size: 1.025rem
       font-family: $heading-font-family
-  li
-    display: inline
-  li:nth-child(n+2)
-    margin-left: 1.5rem
-  a
+  .nav-item
+    display: inline-block
+    text-align: center
+  .nav-link
+    padding: .7rem .5rem
     text-decoration: none
+    font-size: 1.025rem
   .nuxt-link-active
-    // TODO
-    // text-decoration: none
-    // background-color: #eff3f5
-    // padding: .5rem 1rem
+    border-top: 2px dashed #eff3f5
+    border-right: 2px dashed #eff3f5
+    border-left: 2px dashed #eff3f5
+    border-bottom: 2px solid #fff
 
 .content-container .nav
   display: none
+
 
 .landing-container .main
   padding-left: 1rem

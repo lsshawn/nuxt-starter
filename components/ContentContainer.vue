@@ -4,6 +4,8 @@ div.content-container
   div.content
     slot(name="content")
   slot(name="closer")
+  div.content-footer
+    nuxt-link.back-home(to="/") Back Home
 </template>
 
 <style lang="sass">
@@ -19,4 +21,10 @@ $w-content: 38rem
     margin: 0 auto
     @media (min-width: $bp-tablet)
       margin-left: 1rem
+
+.content-footer
+  margin-bottom: 2rem
+.back-home
+  &:before
+    content: "← "
 </style>
