@@ -19,7 +19,7 @@ div.signup-container(id="mc_embed_signup" :class="formClasses")
 export default{
   props: {
     show: { type: Boolean, required: true },
-    toggle: { type: Boolean, required: true }
+    toggle: { type: Function, required: true }
   },
   computed: {
     formClasses () {
