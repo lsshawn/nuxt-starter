@@ -17,9 +17,14 @@ div.site-container(:class="layoutStyle")
       | <nuxt-link to="/projects">record my work</nuxt-link>, and
       | <nuxt-link to="/now">establish my priorities.</nuxt-link>
       | Fundamentally, this place is mainly for me, but while you're here, I hope you find your stay worthwhile.
+
+  //- hidden from page until toggled
+  SignupForm
 </template>
 
 <script>
+import SignupForm from '~/components/SignupForm'
+
 export default {
   data: () => ({
     menu: [
@@ -55,6 +60,10 @@ export default {
     toTitle (path) {
       return path.charAt(1).toUpperCase() + path.replace(/\/[a-z]/, '')
     }
+  },
+
+  components: {
+    SignupForm
   }
 }
 </script>
@@ -85,6 +94,15 @@ export default {
   @media (min-width: $bp-desktop)
     margin-left: .25rem
     text-align: left
+.content-container .site-header
+  border-bottom: 2px solid $primary-light
+  margin-top: .5rem
+  margin-left: -1rem
+  margin-right: -1rem
+  padding-bottom: .25rem
+  padding-left: 1.25rem
+  @include dim-effect(.7, 1)
+
 .masthead
   display: inline-block
   color: $primary-dark
@@ -113,7 +131,9 @@ export default {
   .slogan
     display: none
 
-.accordion-nav
+.content-container .accordion-nav
+  display: none
+.landing-container .accordion-nav
   width: 98%
   margin-top: -.25rem
   margin-bottom: 1.25rem
@@ -150,9 +170,9 @@ export default {
     text-decoration: none
     font-size: 1.025rem
   .nuxt-link-active
-    border-top: 2px dashed #eff3f5
-    border-right: 2px dashed #eff3f5
-    border-left: 2px dashed #eff3f5
+    border-top: 2px dashed $primary-light
+    border-right: 2px dashed $primary-light
+    border-left: 2px dashed $primary-light
     border-bottom: 2px solid #fff
 
 .content-container .nav

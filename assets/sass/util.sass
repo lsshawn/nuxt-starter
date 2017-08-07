@@ -22,3 +22,13 @@ $primary-dark: #45606e
 $bp-tablet: 768px
 $bp-desktop: 1028px
 $w-content: 38rem
+
+
+// MIXINS
+
+@mixin dim-effect ($before, $after)
+  opacity: $before
+  transition: opacity 2s linear
+  &:hover
+    opacity: $after
+    transition: all 2s ease
