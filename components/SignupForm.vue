@@ -1,5 +1,5 @@
 <template lang="pug">
-div.signup-container(id="mc_embed_signup" :class="formClasses")
+div.signup-container(:class="formAnimationClass")
   button.close-form(@click="closeForm") x
   h2 Join My Mailing List
   p Sign up to receive occasional updates.
@@ -11,24 +11,26 @@ div.signup-container(id="mc_embed_signup" :class="formClasses")
   )
     input.signup-field(type="text" placeholder="Your Name" name="FNAME" value="" )
     input.signup-field(type="email" placeholder="Your Email" name="EMAIL" value="" )
-    button.send-button(type="submit" name="subscribe" @click="submitForm") Sign up
+    button.send-button(type="submit" name="subscribe") Sign up
 </template>
 
 <script>
 
 export default{
   props: {
-    show: { type: Boolean, required: true },
+    display: { type: String, required: true },
     toggle: { type: Function, required: true }
   },
   computed: {
-    formClasses () {
-      return this.show ? 'slide-up' : 'slide-down'
+    formAnimationClass () {
+      console.log(this.display)
+      if (this.display === 'show') return 'slide-up'
+      else if (this.display === 'hide') return 'slide-down'
     }
   },
   methods: {
     closeForm () {
-      this.toggle()
+      this.toggle('hide')
     }
   }
 }
@@ -52,6 +54,7 @@ $hide-bottom-pos: -100%
     max-width: 100%
     position: fixed
     left: 4%
+    bottom: $hide-bottom-pos
     text-align: center
     border-radius: 3px
     padding: 3rem 2rem
@@ -120,5 +123,5 @@ $hide-bottom-pos: -100%
       bottom: $show-bottom-pos
     100%
       bottom: $hide-bottom-pos
-    animation: slide-down 1s ease
+  animation: slide-down 1s ease
 </style>

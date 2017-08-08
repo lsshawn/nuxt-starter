@@ -21,7 +21,7 @@ export default {
 
 .preview-container
   max-width: $w-preview
-  min-height: 24.5rem
+  min-height: 24rem
 .preview-content
   margin-top: 1rem
   margin-bottom: -1rem
