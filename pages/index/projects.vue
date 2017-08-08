@@ -5,7 +5,8 @@ PreviewContainer(
   )
   ul.projects-container
     li.project-item(v-for="project in projects")
-      nuxt-link(:to="project.path") {{ project.title }}
+      a(:href="project.link" target="_blank") {{ project.name }}
+      p {{ project.pitch }}
 </template>
 
 <script>
@@ -13,11 +14,7 @@ import PreviewContainer from '~/components/PreviewContainer'
 
 export default {
   asyncData: async ({ app, route }) => ({
-    projects: (await app.$content('/projects')
-      .query({ exclude: 'body' })
-      .getAll())
-      .sort((project1, project2) => project2.weight - project1.weight)
-      .slice(0, 3)
+    projects: (await app.$content('/projects').getOnly(0)).body.slice(0, 3)
   }),
   components: {
     PreviewContainer

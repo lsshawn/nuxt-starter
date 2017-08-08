@@ -4,15 +4,18 @@
   "description": "Personal site",
   "author": "Alid Castano <alidcastano@gmail.com>",
   "dependencies": {
-    "@nuxtjs/axios": "^3.1.0",
-    "nuxt": "^1.0.0-alpha.3",
-    "nuxtent": "file:///Users/acastano/Sites/nuxt/nuxtent"
+    "@nuxtjs/axios": "3.1.0",
+    "@nuxtjs/google-analytics": "1.0.0",
+    "nuxt": "^1.0.0-rc3",
+    "nuxtent": "^0.2.73"
   },
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "IS_STATIC=true nuxtent generate",
+    "build": "NODE_ENV='production' nuxt build",
+    "build-dev": "nuxt build",
+    "start": "NODE_ENV='production' nuxt start",
+    "start-dev": "nuxt start",
+    "generate": "STATIC=true nuxtent generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },

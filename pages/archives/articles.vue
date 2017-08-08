@@ -18,7 +18,6 @@ export default {
 
   computed: {
     articlesByDate () {
-      // this.$content.byDate()
       const articles = new Map()
       this.articles
       .forEach(article => {

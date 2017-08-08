@@ -3,8 +3,12 @@ ContentContainer.project-archives
   div(slot="content")
     h3 Open Source Projects
     ul.project-list
-      li.project-preview(v-for="project in projects")
-        nuxt-link(:to="project.path") {{ project.title }}
+      li(v-for="[created, projects] in projectsByCreated")
+        h3.group-label {{ created }}
+        ul.project-list
+          li.project-preview(v-for="project in projects")
+            a(:href="project.link" target="_blank") {{ project.name }}
+            p {{ project.pitch}}
 </template>
 
 <script>
@@ -12,10 +16,22 @@ import ContentContainer from '~/components/ContentContainer'
 
 export default {
   asyncData: async ({ app, route }) => ({
-    projects: (await app.$content('/projects')
-      .getAll())
-      .sort((project1, project2) => project2.weight - project1.weight)
+    projects: (await app.$content('/projects').getOnly(0)).body
   }),
+
+  computed: {
+    projectsByCreated () {
+      const projects = new Map()
+      this.projects
+      .forEach(project => {
+        const [created] = project.created.split('-')
+        console.log(created)
+        if (!projects.has(created)) projects.set(created, [project])
+        else projects.get(created).push(project)
+      })
+      return [...projects]
+    }
+  },
 
   components: {
     ContentContainer

@@ -15,7 +15,7 @@ export default {
   asyncData: async ({ app }) => ({
     articles: await app.$content('/articles')
     .query({ exclude: 'body' })
-    .getOnly(0, 5)
+    .getOnly(0, 4)
   }),
   components: {
     PreviewContainer

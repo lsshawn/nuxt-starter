@@ -1,9 +1,14 @@
 <template lang="pug">
 PreviewContainer.featured-content
-  div.section-container(v-for="item in featuredContent")
-    h2.section-label {{ item.label }}
+  div.section-container
+    h2.section-label Latest Article
     section
-      nuxt-link.item-link(:to="item.path") {{ item.title }}
+      nuxt-link.item-link(:to="article.path") {{ article.title }}
+  div.section-container
+    h2.section-label Latest Project
+    section
+      a.item-link(:href="project.link" target="_blank")
+        | {{ project.name }}: {{ project.pitch }}
 </template>
 
 <script>
@@ -11,10 +16,8 @@ import PreviewContainer from '~/components/PreviewContainer'
 
 export default {
   asyncData: async ({ app }) => ({
-    featuredContent: [
-      { label: 'Latest Article', ...await app.$content('/articles').getOnly(0) },
-      { label: 'Featured Work', ...await app.$content('/projects').get('/nuxtent') }
-    ]
+    article: await app.$content('/articles').getOnly(0),
+    project: (await app.$content('/projects').getOnly(0)).body[0]
   }),
   components: {
     PreviewContainer
