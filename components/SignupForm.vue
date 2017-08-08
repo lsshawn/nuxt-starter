@@ -23,7 +23,6 @@ export default{
   },
   computed: {
     formAnimationClass () {
-      console.log(this.display)
       if (this.display === 'show') return 'slide-up'
       else if (this.display === 'hide') return 'slide-down'
     }
