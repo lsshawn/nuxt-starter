@@ -20,6 +20,12 @@ export default {
     article: await app.$content('/articles').get(route.path)
   }),
 
+  head () {
+    return {
+      title: 'Alid Castano | ' + this.article.title
+    }
+  },
+
   components: {
     ContentContainer,
     ShareWidgets: () => import('~/components/ShareWidgets')
