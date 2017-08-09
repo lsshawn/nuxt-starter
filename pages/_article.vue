@@ -3,7 +3,9 @@ ContentContainer
   div.article-lead(slot="lead")
     h1.article-title {{ article.title }}
 
-  section.article-body(slot="content" v-html="article.body")
+  section.article-body(slot="content")
+    div(v-html="article.body")
+    ShareWidgets(:article="article")
 
   div.article-closer(slot="closer")
     img.article-image(v-if="article.image" :src="`/img/articles/${article.image}`")
@@ -19,13 +21,15 @@ export default {
   }),
 
   components: {
-    ContentContainer
+    ContentContainer,
+    ShareWidgets: () => import('~/components/ShareWidgets')
   }
 }
 </script>
 
 <style lang="sass">
 @import "../assets/sass/util"
+
 .article-lead
   margin: 1rem auto 1.75rem auto
 .article-title
@@ -39,7 +43,7 @@ export default {
 .article-closer
   margin-bottom: 3rem
 .article-image
-  margin: 0 auto 1rem auto
+  margin: .5rem auto 1rem auto
 .article-quote
   max-width: 85%
   margin: 0 auto
