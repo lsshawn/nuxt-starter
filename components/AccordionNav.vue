@@ -55,10 +55,11 @@ export default {
   display: inline-block
   text-align: center
   .nav-link
-    padding: .7rem .5rem
+    padding: .7rem .35rem
     text-decoration: none
-    font-size: 1.025rem
-    @media (min-width: $bp-desktop)
+    font-size: 1rem
+    @media (min-width: $bp-tablet)
+      font-size: 1.025rem
       padding: .7rem
   .nuxt-link-active
     border-top: 2px dashed $primary-light

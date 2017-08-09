@@ -29,6 +29,7 @@ export default {
   margin-right: -1rem
   padding-bottom: .25rem
   padding-left: 1.25rem
+  text-align: left
 
 .masthead
   display: inline-block
@@ -52,7 +53,7 @@ export default {
       text-align: left
 
 .landing-container .masthead
-  font-size: 3.5rem
+  font-size: 3rem
   @media (min-width: $bp-tablet)
     font-size: 5rem
 

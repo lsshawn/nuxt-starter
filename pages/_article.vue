@@ -25,12 +25,15 @@ export default {
 </script>
 
 <style lang="sass">
+@import "../assets/sass/util"
 .article-lead
   margin: 1rem auto 1.75rem auto
 .article-title
-  font-size: 2.75rem
+  font-size: 2rem
   margin-top: 0
   color: #45606e
+  @media (min-width: $bp-tablet)
+    font-size: 2.75rem
 .article-body
   margin-top: -.6rem
 .article-closer

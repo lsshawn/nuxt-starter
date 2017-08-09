@@ -8,6 +8,8 @@ div.home-footer
 </template>
 
 <style lang="sass">
+@import "../assets/sass/util"
+
 .footer-message
   border-top: 2px dashed #eff3f5
   position: relative
@@ -16,6 +18,9 @@ div.home-footer
   padding-left: 1rem
   padding-right: 1rem
   max-width: 95%
+  font-size: .85rem
+  @media (min-width: $bp-tablet)
+    font-size: 1rem
   a
     text-decoration: underline
 </style>
