@@ -53,7 +53,7 @@ export default {
       text-align: left
 
 .landing-container .masthead
-  font-size: 3rem
+  font-size: 2.6rem
   @media (min-width: $bp-tablet)
     font-size: 5rem
 

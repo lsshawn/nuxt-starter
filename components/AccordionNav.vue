@@ -57,7 +57,7 @@ export default {
   .nav-link
     padding: .7rem .35rem
     text-decoration: none
-    font-size: 1rem
+    font-size: .9rem
     @media (min-width: $bp-tablet)
       font-size: 1.025rem
       padding: .7rem
