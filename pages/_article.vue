@@ -3,7 +3,7 @@ ContentContainer
   div.article-lead(slot="lead")
     h1.article-title {{ article.title }}
 
-  section.article-body(slot="content")
+  section.article-body(slot="content" :style="overrideMargin")
     div(v-html="article.body")
     ShareWidgets(:article="article")
 
@@ -19,6 +19,12 @@ export default {
   asyncData: async ({ app, route }) => ({
     article: await app.$content('/articles').get(route.path)
   }),
+
+  computed: {
+    overrideMargin () {
+      if (this.article.title.length < 30) return { 'margin-left': '-1rem' }
+    }
+  },
 
   head () {
     return {

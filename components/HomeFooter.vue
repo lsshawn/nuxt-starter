@@ -1,6 +1,6 @@
 <template lang="pug">
 div.home-footer
-  p.footer-message Welcome to my online home! I come here
+  p.footer-message Welcome to my online home! I come here to
     |  <nuxt-link to="/articles">clarify my thoughts</nuxt-link>,
     | <nuxt-link to="/projects">record my work</nuxt-link>, and
     | <nuxt-link to="/now">establish my priorities.</nuxt-link>
