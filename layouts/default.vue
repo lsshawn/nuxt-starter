@@ -18,7 +18,7 @@ import AccordionNav from '~/components/AccordionNav'
 
 export default {
   data: () => ({
-    menu: ['/articles', '/projects', '/now', '/about', '/contact'],
+    menu: ['/articles', '/projects', '/about', '/contact'],
     signupDisplay: 'none'
   }),
   computed: {
