@@ -10,9 +10,9 @@ Passion is a lovely affair---until reality slaps you in the face and you realize
 
 The effects of passion became clear when I tried to start my first startup. A couple months in, my co-founders and I sat down to discuss equity. One was a programmer. The other a good communicator. As for me? Frankly, I couldn't describe what I brought to the table---because I didn't bring anything concrete. Without a base of concrete skills, all I was, was a passionate idea guy; as rare and valuable as the average student.
 
-From the point forward, I made the resolution to use any remaining time, inside or outside of class, to become useful---to develop concrete skills. Only then, would I worry about passion.
+From that point forward, I made the resolution to use any remaining time, inside or outside of class, to become useful---to develop concrete skills. Only then, would I worry about passion.
 
-Coincidently, that's the advice famed entrepreneur and investor Marc Andreeseen, whose career advice inspired this article, gives students:
+Coincidently, that's the advice famed entrepreneur and investor Marc Andreeseen gives students:
 
 >If you intend to have an impact on the world, the faster you start developing concrete skills that will be useful in the real world, the better...Once you get into the real world and you're primed for success, then you can pursue your passion... Graduating with a technical degree [or any other useful skill] is like heading out into the real world armed with an assault rifle instead of a dull knife. Don't miss that opportunity because of some fuzzy romanticized view of liberal arts broadening your horizons.
 
