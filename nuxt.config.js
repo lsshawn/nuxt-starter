@@ -10,9 +10,27 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  plugins: [
+    '~/plugins/vuetify.js'
+  ],
+  modules: [
+    'nuxtent',
+    ['@nuxtjs/google-analytics', { ua: 'UA-80644113-1' }]
+  ],
+  css: [
+    { src: '~assets/sass/global.sass', lang: 'sass' },
+    '~/assets/style/app.styl',
+    '~/assets/style/font.styl',
+    '~/assets/css/main.css'
+  ],
+  loading: { color: '#FFD73C' },
   build: {
+    vendor: [
+      '~/plugins/vuetify.js'
+    ],
+    extractCSS: true,
     extend (config, ctx) {
-      if (ctx.isClient) {
+      if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -22,12 +40,4 @@ module.exports = {
       }
     }
   },
-  modules: [
-    'nuxtent',
-    ['@nuxtjs/google-analytics', { ua: 'UA-80644113-1' }]
-  ],
-  css: [
-    { src: '~assets/sass/global.sass', lang: 'sass' }
-  ],
-  loading: false
 }

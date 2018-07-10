@@ -7,7 +7,8 @@
     "@nuxtjs/axios": "3.1.0",
     "@nuxtjs/google-analytics": "1.0.0",
     "nuxt": "^1.0.0-rc3",
-    "nuxtent": "^0.2.73"
+    "nuxtent": "^0.2.73",
+    "vuetify": "^1.1.4"
   },
   "scripts": {
     "dev": "nuxt",
@@ -27,8 +28,13 @@
     "eslint-plugin-html": "^2.0.0",
     "eslint-plugin-promise": "^3.4.1",
     "eslint-plugin-standard": "^2.0.1",
+    "i": "^0.3.6",
+    "netlify-cms": "^1.9.3",
     "node-sass": "^4.5.3",
+    "nuxt-netlify-cms": "^3.0.1",
     "pug": "^2.0.0-rc.2",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
   }
 }
