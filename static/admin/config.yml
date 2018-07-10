@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: lsshawn/sshawn
+  repo: lsshawn/nuxt-starter
   # url: https://sshawn.com
 
 media_folder: "static/uploads"
