@@ -18,7 +18,6 @@ module.exports = {
     ['@nuxtjs/google-analytics', { ua: 'UA-80644113-1' }]
   ],
   css: [
-    { src: '~assets/sass/global.sass', lang: 'sass' },
     '~/assets/style/app.styl',
     '~/assets/style/font.styl',
     '~/assets/css/main.css'
