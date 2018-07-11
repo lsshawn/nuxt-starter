@@ -1,6 +1,6 @@
 <template>
   <v-card flat>
-    <nuxt-link :to="'/' + id" class="yellow--text text--darken-2">
+    <nuxt-link :to="path" class="yellow--text text--darken-2">
       <v-card-media
         class="card-img"
         height="250px"
@@ -18,9 +18,9 @@
     <v-card-text class="py-0">
       <h3 class="mb-3 grey--text darken-4">{{ subtitle }}</h3>
       <div>{{ excerpt }}</div>
-      <v-btn class="yellow darken-1 ml-0 mt-3 meta-category grey--text text--darken-3" nuxt :to="'/' + id" flat small>read more</v-btn>
+      <v-btn class="yellow darken-1 ml-0 mt-3 meta-category grey--text text--darken-3" nuxt :to="path" flat small>read more</v-btn>
     </v-card-text>
-    <nuxt-link :to="permalink" class="post-preview"></nuxt-link>
+    <nuxt-link :to="path" class="post-preview"></nuxt-link>
     <hr class="separator yellow mb-0">
     <div class="pl-3 py-1 grey--text lighten-1">
       <h6>
@@ -42,9 +42,6 @@ export default {
     subtitle: {
       required: true
     },
-    permalink: {
-      required: true
-    },
     excerpt: {
       required: true
     },
@@ -55,6 +52,10 @@ export default {
       type: String
     },
     category: {
+      type: String
+    },
+    path: {
+      required: true,
       type: String
     }
   }

@@ -8,6 +8,7 @@
     "@nuxtjs/google-analytics": "1.0.0",
     "nuxt": "^1.0.0-rc3",
     "nuxtent": "^0.2.73",
+    "vue-disqus": "^3.0.3",
     "vuetify": "^1.1.4"
   },
   "scripts": {
