@@ -40,29 +40,15 @@ export default {
       required: true
     },
     subtitle: {
-      type: String,
       required: true
     },
     excerpt: {
-      type: String,
       required: true
     },
     thumbnailUrl: {
-      type: String,
-      required: true
-    },
-    id: {
-      type: String,
-      required: true
-    },
-    author: {
-      type: String,
       required: true
     },
     createdDate: {
-      type: String
-    },
-    publishedDate: {
       type: String
     },
     category: {
