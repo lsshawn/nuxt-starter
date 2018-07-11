@@ -20,11 +20,11 @@
       <div>{{ excerpt }}</div>
       <v-btn class="yellow darken-1 ml-0 mt-3 meta-category grey--text text--darken-3" nuxt :to="'/' + id" flat small>read more</v-btn>
     </v-card-text>
-    <nuxt-link :to="'/' + id" class="post-preview"></nuxt-link>
+    <nuxt-link :to="permalink" class="post-preview"></nuxt-link>
     <hr class="separator yellow mb-0">
     <div class="pl-3 py-1 grey--text lighten-1">
       <h6>
-        {{ publishedDate || createdDate | prettyDate}}
+        {{ createdDate | prettyDate}}
         <span class="px-1 yellow--text darken-3">|</span>
         {{ category }}
       </h6>
@@ -40,6 +40,9 @@ export default {
       required: true
     },
     subtitle: {
+      required: true
+    },
+    permalink: {
       required: true
     },
     excerpt: {

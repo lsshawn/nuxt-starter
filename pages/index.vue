@@ -6,12 +6,14 @@
       </div>
       <div else>
         <v-layout row wrap>
-          <v-flex xs12 sm8 offset-sm2 v-for="post in posts" :key="post.id">  
+          <v-flex xs12 sm8 offset-sm2 v-for="post in posts" :key="post.id">
+            {{ post }}  
             <blog-preview
               :title="post.title"
               :excerpt="post.excerpt"
               :thumbnailUrl="post.thumbnailUrl"
               :category="post.category"
+              :permalink="post.permalink"
               :createdDate="post.date"
               />
           </v-flex>
