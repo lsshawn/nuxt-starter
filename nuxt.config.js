@@ -1,17 +1,43 @@
 module.exports = {
   head: {
-    title: 'Nuxt CMS Starter',
+    title: 'Sshawn | A digital nomad who build chatbot for companies. Polygot. Minimalist.',
     meta: [
       { charset: 'utf-8' },
+      { meta: 'keyword', content: 'digital nomad, chatbot, programmer, freelancer, polygot' },
+      { meta: 'robots', content: 'index, follow' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Personal Site' }
+      { hid: 'description', name: 'description', content: 'A digital nomad who build chatbot for companies. Polygot. Minimalist.' },
+      // chrome, firefox, opera
+      { name: 'theme-color', content: '#FFD73C' },
+      // windows
+      { name: 'msapplication-navbutton-color', content: '#FFD73C' },
+      // iOS Safari
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: '#FFD73C' },
+      // Twitter Card data
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: '@sshawn' },
+      { name: 'twitter:title', content: 'Sshawn' },
+      { name: 'twitter:description', content: 'A digital nomad who build chatbot for companies. Polygot. Minimalist.' },
+      { name: 'twitter:creator', content: '@sshawn' },
+      // Twitter Summary card images must be at least 120x120px
+      { name: 'twitter:image', content: '' },
+      // Facebook
+      { property: 'og:title', content: 'Sshawn' },
+      { property: 'og:type', content: 'A digital nomad who build chatbot for companies. Polygot. Minimalist.' },
+      { property: 'og:url', content: 'https://sshawn.com/' },
+      { property: 'og:image', content: '' },
+      { property: 'og:description', content: 'A digital nomad who build chatbot for companies. Polygot. Minimalist.' },
+      { property: 'og:site_name', content: 'Sshawn' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito:300,400,500,700|Material+Icons' }
     ]
   },
   plugins: [
-    '~/plugins/vuetify.js'
+    '~/plugins/vuetify.js',
+     { src: '~plugins/filters.js' }
   ],
   modules: [
     'nuxtent',

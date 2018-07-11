@@ -1,7 +1,7 @@
 <template>
   <v-layout column justify-center>
     <v-flex xs12>
-      <div v-if="post && posts.length === 0">
+      <div v-if="posts && posts.length === 0">
         <app-spinner></app-spinner> 
       </div>
       <div else>

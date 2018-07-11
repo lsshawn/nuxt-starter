@@ -1,6 +1,6 @@
 <template>
   <v-container fluid grid-list-lg class="ma-0 pa-0 main-container">
-    <v-layout column v-editable="blok">
+    <v-layout column>
       <v-flex xs12 md6 offset-md3 class="px-3">
         <h1 class="blog-title">{{ article.title }}</h1>
         <h2 class="blog-title mt-2">{{ article.subtitle }}</h2>
@@ -21,10 +21,10 @@
           </div>
           <div>
             <!-- <script src="http://localhost:3001/embed.js"></script> -->
-            <script>
+            <!-- <script>
               var options = {}
               window.Botkit.boot(options)
-            </script>
+            </script> -->
           </div>
       </v-flex>
 
@@ -65,9 +65,9 @@
       </v-btn>
       <social-sharing 
       :url="`https://sshawn.com${this.$route.fullPath}`"
-      :title="title"
-      :description="excerpt"
-      :quote="subtitle"
+      :title="article.title"
+      :description="article.excerpt"
+      :quote="article.subtitle"
       hashtags=""
       twitter-user="sshawn"
       inline-template
