@@ -1,10 +1,16 @@
 <template>
   <v-app>
-    <div class="text-xs-center mt-2 display-1 yellow--text text--darken-2">
-      <v-avatar size="70px">
-        <img src="@/static/img/profile-shawn.png" alt="Sshawn">
-      </v-avatar>
-    </div>
+    <!-- Header -->
+    <v-layout row class="mb-0 back-button">
+      <v-flex xs1 class="pa-0 pl-2 mr-2">
+        <v-btn icon @click.native="back">
+          <v-icon>keyboard_backspace</v-icon>
+        </v-btn>
+      </v-flex>
+      <v-flex xs10 class="pa-0 pl-3">
+        <h1>Back</h1>
+      </v-flex>
+    </v-layout>
     <app-menu></app-menu>
 
     <v-container fluid grid-list-lg class="mt-0 px-3 main-container">
@@ -25,13 +31,19 @@
     components: {
       appFooter: AppFooter,
       appMenu: AppMenu
+    },
+    methods: {
+      back () {
+        this.$router.back()
+      }
     }
   }
 </script>
- 
-<style>
-h1, h3 {
-  margin-top: 30px;
-  margin-bottom: 10px;
+
+<style scoped>
+@media screen and (min-width: 566px) {
+  .back-button { 
+    display: none;
+  }
 }
 </style>

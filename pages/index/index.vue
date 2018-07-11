@@ -16,7 +16,7 @@ import PreviewContainer from '~/components/PreviewContainer'
 
 export default {
   asyncData: async ({ app }) => ({
-    article: await app.$content('/articles').getOnly(0),
+    posts: await app.$content('/articles').getAll(),
     project: (await app.$content('/projects').getOnly(0)).body[0]
   }),
   components: {
